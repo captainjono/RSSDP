@@ -461,10 +461,10 @@ namespace Test.RssdpPortable
 			Assert.IsFalse(subDevice.CustomProperties.Contains("X_Rhapsody-Extension"));
 		}
 
-	    [TestMethod]
-	    public void Deserialisation_XmlWithNewlines_HandlesIconListAndFollowingProperties()
-	    {
-	        var docString = @"<?xml version=""1.0"" encoding=""utf-8""?>
+		[TestMethod]
+		public void Deserialisation_XmlWithNewlines_HandlesIconListAndFollowingProperties()
+		{
+			var docString = @"<?xml version=""1.0"" encoding=""utf-8""?>
 <root xmlns=""urn:schemas-upnp-org:device-1-0"">
     <specVersion>
         <major>1</major>
@@ -526,31 +526,31 @@ namespace Test.RssdpPortable
     </device>
 </root>";
 
-	        var device = new SsdpRootDevice(new Uri("http://192.168.1.11/UPnP/DeviceDescription"), TimeSpan.FromMinutes(30), docString);
-	        Assert.AreEqual("MinimServer[RIEMANN]", device.FriendlyName);
-	        Assert.AreEqual("minimserver.com", device.Manufacturer);
-	        Assert.AreEqual("MinimServer", device.ModelName);
-	        Assert.AreEqual("uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4", device.Udn);
-	        Assert.AreEqual(4, device.Icons.Count);
-	        Assert.AreEqual(4, device.Icons.Select(icon => icon.Url.ToString()).Distinct().Count());
-        }
+			var device = new SsdpRootDevice(new Uri("http://192.168.1.11/UPnP/DeviceDescription"), TimeSpan.FromMinutes(30), docString);
+			Assert.AreEqual("MinimServer[RIEMANN]", device.FriendlyName);
+			Assert.AreEqual("minimserver.com", device.Manufacturer);
+			Assert.AreEqual("MinimServer", device.ModelName);
+			Assert.AreEqual("uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4", device.Udn);
+			Assert.AreEqual(4, device.Icons.Count);
+			Assert.AreEqual(4, device.Icons.Select(icon => icon.Url.ToString()).Distinct().Count());
+		}
 
-	    [TestMethod]
-	    public void Deserialisation_XmlWithoutNewlines_HandlesIconListAndFollowingProperties()
-	    {
-	        var docString = @"<?xml version=""1.0"" encoding=""utf-8""?><root xmlns=""urn:schemas-upnp-org:device-1-0""><specVersion><major>1</major><minor>1</minor></specVersion><device><deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType><iconList><icon><mimetype>image/png</mimetype><width>120</width><height>120</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-120.png</url></icon><icon><mimetype>image/png</mimetype><width>48</width><height>48</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-48.png</url></icon><icon><mimetype>image/jpeg</mimetype><width>120</width><height>120</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-120.jpg</url></icon><icon><mimetype>image/jpeg</mimetype><width>48</width><height>48</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-48.jpg</url></icon></iconList><friendlyName>MinimServer[RIEMANN]</friendlyName><manufacturer>minimserver.com</manufacturer><modelName>MinimServer</modelName><UDN>uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4</UDN><serviceList><service><serviceType>urn:schemas-upnp-org:service:ConnectionManager:1</serviceType><serviceId>urn:upnp-org:serviceId:ConnectionManager</serviceId><SCPDURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/upnp.org-ConnectionManager-1/service.xml</SCPDURL><controlURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ConnectionManager-1/control</controlURL><eventSubURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ConnectionManager-1/event</eventSubURL></service><service><serviceType>urn:schemas-upnp-org:service:ContentDirectory:1</serviceType><serviceId>urn:upnp-org:serviceId:ContentDirectory</serviceId><SCPDURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/upnp.org-ContentDirectory-1/service.xml</SCPDURL><controlURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ContentDirectory-1/control</controlURL><eventSubURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ContentDirectory-1/event</eventSubURL></service></serviceList><presentationURL>http://127.0.0.1:9790/</presentationURL></device></root>";
+		[TestMethod]
+		public void Deserialisation_XmlWithoutNewlines_HandlesIconListAndFollowingProperties()
+		{
+			var docString = @"<?xml version=""1.0"" encoding=""utf-8""?><root xmlns=""urn:schemas-upnp-org:device-1-0""><specVersion><major>1</major><minor>1</minor></specVersion><device><deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType><iconList><icon><mimetype>image/png</mimetype><width>120</width><height>120</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-120.png</url></icon><icon><mimetype>image/png</mimetype><width>48</width><height>48</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-48.png</url></icon><icon><mimetype>image/jpeg</mimetype><width>120</width><height>120</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-120.jpg</url></icon><icon><mimetype>image/jpeg</mimetype><width>48</width><height>48</height><depth>24</depth><url>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/resource/minimicon-48.jpg</url></icon></iconList><friendlyName>MinimServer[RIEMANN]</friendlyName><manufacturer>minimserver.com</manufacturer><modelName>MinimServer</modelName><UDN>uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4</UDN><serviceList><service><serviceType>urn:schemas-upnp-org:service:ConnectionManager:1</serviceType><serviceId>urn:upnp-org:serviceId:ConnectionManager</serviceId><SCPDURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/upnp.org-ConnectionManager-1/service.xml</SCPDURL><controlURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ConnectionManager-1/control</controlURL><eventSubURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ConnectionManager-1/event</eventSubURL></service><service><serviceType>urn:schemas-upnp-org:service:ContentDirectory:1</serviceType><serviceId>urn:upnp-org:serviceId:ContentDirectory</serviceId><SCPDURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/Upnp/upnp.org-ContentDirectory-1/service.xml</SCPDURL><controlURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ContentDirectory-1/control</controlURL><eventSubURL>/df5bda28-1b1a-4a62-89ed-0acc041ee8e4/upnp.org-ContentDirectory-1/event</eventSubURL></service></serviceList><presentationURL>http://127.0.0.1:9790/</presentationURL></device></root>";
 
-	        var device = new SsdpRootDevice(new Uri("http://192.168.1.11/UPnP/DeviceDescription"), TimeSpan.FromMinutes(30), docString);
-	        Assert.AreEqual("MinimServer[RIEMANN]", device.FriendlyName);
-	        Assert.AreEqual("minimserver.com", device.Manufacturer);
-	        Assert.AreEqual("MinimServer", device.ModelName);
-	        Assert.AreEqual("uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4", device.Udn);
-	        Assert.AreEqual(4, device.Icons.Count);
-	        var d = device.Icons.Select(icon => icon.Url.ToString()).Distinct();
-	        Assert.AreEqual(4, device.Icons.Select(icon => icon.Url.ToString()).Distinct().Count());
-	    }
+			var device = new SsdpRootDevice(new Uri("http://192.168.1.11/UPnP/DeviceDescription"), TimeSpan.FromMinutes(30), docString);
+			Assert.AreEqual("MinimServer[RIEMANN]", device.FriendlyName);
+			Assert.AreEqual("minimserver.com", device.Manufacturer);
+			Assert.AreEqual("MinimServer", device.ModelName);
+			Assert.AreEqual("uuid:df5bda28-1b1a-4a62-89ed-0acc041ee8e4", device.Udn);
+			Assert.AreEqual(4, device.Icons.Count);
+			var d = device.Icons.Select(icon => icon.Url.ToString()).Distinct();
+			Assert.AreEqual(4, device.Icons.Select(icon => icon.Url.ToString()).Distinct().Count());
+		}
 
-        [TestMethod]
+		[TestMethod]
 		public void DeserialisationHandlesEmptyCustomProperties()
 		{
 			//See issue #70 in repo - empty custom properties would cause
@@ -587,6 +587,23 @@ namespace Test.RssdpPortable
 			Assert.AreEqual(device.ModelDescription, "TwonkyServer (Windows, T-206)");
 			Assert.AreEqual(device.ModelNumber, "8.4");
 			Assert.AreEqual(device.SerialNumber, "8.4");
+		}
+
+		[TestMethod]
+		public void DeserialisationHandlesNonStandardXmlCharacters()
+		{
+			//See issue #89 in repo
+			var docString = System.IO.File.ReadAllText("denonbad.xml");
+
+			var device = new SsdpRootDevice(new Uri("http://192.168.5.117/UPnP/DeviceDescription"), TimeSpan.FromMinutes(30), docString);
+			Assert.IsFalse(device.CustomProperties.Contains("pv:extension"));
+			Assert.AreEqual(device.Manufacturer, "Denon");
+			Assert.AreEqual(device.ManufacturerUrl, "http://www.denon.com");
+			Assert.AreEqual(device.ModelName, "*AVR-E400");
+			Assert.AreEqual(device.ModelUrl, "http://www.denon.com");
+			Assert.AreEqual(device.ModelDescription, "AV SURROUND RECEIVER");
+			Assert.AreEqual(device.ModelNumber, "E400");
+			Assert.AreEqual(device.SerialNumber, "0005CD2BA891");
 		}
 
 		#endregion

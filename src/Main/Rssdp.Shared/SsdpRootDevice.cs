@@ -145,9 +145,9 @@ namespace Rssdp
 
 		private void LoadFromDescriptionDocument(string deviceDescriptionXml)
 		{
-			using (var stringReader = new StringReader (deviceDescriptionXml))
+			using (var stringReader = new System.IO.StringReader(deviceDescriptionXml))
 			{
-				var reader = XmlReader.Create (stringReader, new XmlReaderSettings { CheckCharacters = false });
+				var reader = XmlReader.Create(stringReader, new XmlReaderSettings { CheckCharacters = false });
 				while (!reader.EOF)
 				{
 					reader.Read();

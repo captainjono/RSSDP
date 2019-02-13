@@ -99,9 +99,9 @@ namespace Rssdp
 			if (deviceDescriptionXml == null) throw new ArgumentNullException("deviceDescriptionXml");
 			if (deviceDescriptionXml.Length == 0) throw new ArgumentException("deviceDescriptionXml cannot be an empty string.", "deviceDescriptionXml");
 
-			using (var ms = new System.IO.MemoryStream(System.Text.UTF8Encoding.UTF8.GetBytes(deviceDescriptionXml)))
+			using (var sr = new System.IO.StringReader(deviceDescriptionXml))
 			{
-				var reader = XmlReader.Create(ms);
+				var reader = XmlReader.Create(sr, new XmlReaderSettings() { CheckCharacters = false });
 
 				LoadDeviceProperties(reader, this);
 			}
