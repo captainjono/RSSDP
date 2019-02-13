@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using Rssdp.Infrastructure;
+using System.IO;
 
 namespace Rssdp
 {
@@ -144,9 +145,9 @@ namespace Rssdp
 
 		private void LoadFromDescriptionDocument(string deviceDescriptionXml)
 		{
-			using (var ms = new System.IO.MemoryStream(System.Text.UTF8Encoding.UTF8.GetBytes(deviceDescriptionXml)))
+			using (var stringReader = new StringReader (deviceDescriptionXml))
 			{
-				var reader = XmlReader.Create(ms);
+				var reader = XmlReader.Create (stringReader, new XmlReaderSettings { CheckCharacters = false });
 				while (!reader.EOF)
 				{
 					reader.Read();
