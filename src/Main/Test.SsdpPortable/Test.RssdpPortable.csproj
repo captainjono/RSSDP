@@ -98,12 +98,6 @@
     <Compile Include="UPnP10DeviceValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RSSDP.NetFx40\Rssdp.NetFx40.csproj">
-      <Project>{b74c6f04-6516-4597-bda1-023036f80095}</Project>
-      <Name>Rssdp.NetFx40</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

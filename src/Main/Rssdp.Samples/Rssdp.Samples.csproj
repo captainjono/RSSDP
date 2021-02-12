@@ -113,12 +113,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RSSDP.NetFx40\Rssdp.NetFx40.csproj">
-      <Project>{b74c6f04-6516-4597-bda1-023036f80095}</Project>
-      <Name>Rssdp.NetFx40</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

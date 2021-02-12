@@ -8,8 +8,9 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/captainjono/RSSDP</PackageProjectUrl>
     <Description>Rssp ported to .NET5 without the cruft</Description>
-    <Copyright>MIT</Copyright>
+    <Copyright></Copyright>
     <PackageReleaseNotes>Adds .NET std 2.1 support. Deprecates support for older platforms to take advantage of code features</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug' ">
     <IntermediateOutputPath>obj\Debug</IntermediateOutputPath>
