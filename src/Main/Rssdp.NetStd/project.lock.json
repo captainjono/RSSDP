@@ -3173,29 +3173,36 @@
     ".NETStandard,Version=v1.3": []
   },
   "packageFolders": {
-    "C:\\Users\\Weq\\.nuget\\packages\\": {},
+    "C:\\Users\\troy.ONTEMPO\\.nuget\\packages": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\svn\\RSSDP\\src\\Main\\Rssdp.NetCore\\Rssdp.NetCore.csproj",
+      "projectUniqueName": "C:\\Projects\\GitHub\\RSSDP\\src\\Main\\Rssdp.NetCore\\Rssdp.NetCore.csproj",
       "projectName": "Rssdp.NetCore",
-      "projectPath": "C:\\svn\\RSSDP\\src\\Main\\Rssdp.NetCore\\Rssdp.NetCore.csproj",
-      "projectJsonPath": "C:\\svn\\RSSDP\\src\\Main\\Rssdp.NetCore\\project.json",
-      "packagesPath": "C:\\Users\\Weq\\.nuget\\packages\\",
-      "outputPath": "C:\\svn\\RSSDP\\src\\Main\\Rssdp.NetCore\\obj\\",
+      "projectPath": "C:\\Projects\\GitHub\\RSSDP\\src\\Main\\Rssdp.NetCore\\Rssdp.NetCore.csproj",
+      "projectJsonPath": "C:\\Projects\\GitHub\\RSSDP\\src\\Main\\Rssdp.NetCore\\project.json",
+      "packagesPath": "C:\\Users\\troy.ONTEMPO\\.nuget\\packages",
+      "outputPath": "C:\\Projects\\GitHub\\RSSDP\\src\\Main\\Rssdp.NetCore\\obj\\",
       "projectStyle": "ProjectJson",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Weq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Projects\\GitHub\\RSSDP\\src\\Main\\.nuget\\NuGet.Config",
+        "C:\\Projects\\GitHub\\NuGet.Config",
+        "C:\\Users\\troy.ONTEMPO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "sources": {
+        "C:\\Nuget.LocalRepository": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\troy.ONTEMPO\\.dotnet\\NuGetFallbackFolder": {},
+        "\\\\frodo.ontempo.local\\Internal Nuget Feed\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nugetized.blob.core.windows.net/live-reload/index.json": {},
+        "https://rtstnz.pkgs.visualstudio.com/Ontempo/_packaging/rtstnuget/nuget/v3/index.json": {}
       }
     },
     "dependencies": {

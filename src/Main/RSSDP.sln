@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{663F1AD9-34F1-480D-A82C-980D3EC8F8B6}"
 	ProjectSection(SolutionItems) = preProject
@@ -32,6 +32,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Rssdp.Shared", "Rssdp.Share
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rssdp.Portable", "RSSDP.Portable\Rssdp.Portable.csproj", "{41B22288-FB96-451F-91B7-E278CD381DE5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rssdp.NetStd", "Rssdp.NetStd\Rssdp.NetStd.csproj", "{1B158530-D1DD-46AD-9165-6EE4A9424BAB}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Rssdp.Shared\Rssdp.Shared.projitems*{1491d1a7-bbd0-4537-9f49-fddd86d4989c}*SharedItemsImports = 4
@@ -41,7 +43,6 @@ Global
 		Rssdp.Shared\Rssdp.Shared.projitems*{6878dade-111f-4fbd-91c7-e9c7479a84bb}*SharedItemsImports = 4
 		Rssdp.Shared\Rssdp.Shared.projitems*{899d3d92-5b01-49ce-bd90-a6c90d5321f1}*SharedItemsImports = 4
 		Rssdp.Shared\Rssdp.Shared.projitems*{ab769ed2-0a3d-41b7-a702-0e5b08da158e}*SharedItemsImports = 4
-		Rssdp.Shared\Rssdp.Shared.projitems*{b74c6f04-6516-4597-bda1-023036f80095}*SharedItemsImports = 4
 		Rssdp.Shared\Rssdp.Shared.projitems*{cc2b3fbe-239e-4967-b566-1a7e4d9eaf5d}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -204,8 +205,27 @@ Global
 		{41B22288-FB96-451F-91B7-E278CD381DE5}.Release|x64.Build.0 = Release|Any CPU
 		{41B22288-FB96-451F-91B7-E278CD381DE5}.Release|x86.ActiveCfg = Release|Any CPU
 		{41B22288-FB96-451F-91B7-E278CD381DE5}.Release|x86.Build.0 = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|ARM.Build.0 = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|x64.Build.0 = Debug|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|x86.ActiveCfg = Debug|x86
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Debug|x86.Build.0 = Debug|x86
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|ARM.ActiveCfg = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|ARM.Build.0 = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|x64.ActiveCfg = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|x64.Build.0 = Release|Any CPU
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|x86.ActiveCfg = Release|x86
+		{1B158530-D1DD-46AD-9165-6EE4A9424BAB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A096A7C5-D49F-4E9B-8F77-E89BA1AD9D38}
 	EndGlobalSection
 EndGlobal
